@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "My portfolio",
+    "img": "/images/profile-logo-blue.png",
+    "url": "",
+    "slider": [
+      "/images/profile-slide1.jpg",
+      "/images/profile-slide2.jpg",
+      "/images/profile-slide3.jpg",
+      "/images/profile-slide4.jpg",
+      "/images/profile-slide5.jpg"
+    ],
+    "about": "本サイト、私のポートフォリオサイトです。",
+    "tools": ["HTML5", "CSS3/Sass", "TypeScript", "React", "Xd"],
+    "more": {
+      "description": "React・TypeScriptの基礎学習のまとめとして作成しました。パッケージは小規模アプリに適している・トレンドである、をポイントに選定しました。画面とロジックの分離、保守性を意識しています。",
+      "moreLists": [
+        {
+          "head": "パッケージ",
+          "text": "Ui: chakra-ui\r\nStyling: emotion\r\nState Management: recoil\r\nForm: react-hook-form\r\nValidation: yup\r\nMail: emailjs\r\nSlider: Swiper"
+        },
+        {
+          "head": "UI",
+          "text": "ベースには「chakra-ui」を用いています。アニメーションに関するスタイルの指定が煩雑になってしまったため、emotion、および素のCSSを適時組み合わせました。"
+        },
+        {
+          "head": "プロジェクトコンテンツ",
+          "text": "保守性を意識し、各プロジェクトごとのコンポーネントは作成しない方針で作成しました。コンポーネントはテンプレートとし、文章・画像等コンテンツの内容はJSONファイルから読み込んでいます。"
+        },
+        {
+          "head": "スクロールアニメーション",
+          "text": "ナビゲーションに導入しています。他成果物で作成した交差オブザーバーAPI (Intersection Observer API)をリファクタリングし、カスタムフック化しました。"
+        },
+        {
+          "head": "問合せフォーム",
+          "text": "react-hook-form + yup + emailjs + recoilで実装しました。react-hook-formでフォームの状態を検知し、バリデーションをyupで実装しています。yupは標準で用意されているエラーメッセージが英語であるため、日本語に変換する設定ファイルを作成しました。recoilはフォーム入力とメール送信処理のコンポーネント間の階層が離れてしまい、propsのバケツリレーが発生してしまったため導入しました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "JPHack official site",
+    "img": "../../images/jp-logo.png",
+    "url": "https://kawahagi014.github.io/JPHack-oficial-site/",
+    "slider": [
+      "/images/jp-slide1.jpg",
+      "/images/jp-slide2.jpg",
+      "/images/jp-slide3.jpg",
+      "/images/jp-slide4.jpg",
+      "/images/jp-slide5.jpg",
+      "/images/jp-slide6.jpg",
+      "/images/jp-slide7.jpg",
+      "/images/jp-slide8.jpg",
+      "/images/jp-slide9.jpg"
+    ],
+    "about": "外国人向け情報発信メディアを展開している団体、JP Hack様のオフィシャルサイトを作成しました。ディレクション〜デザイン〜コーディングを一貫して担当しています。文書・画像は仮版ですが、本サイトへの掲載の許可は得ています。",
+    "tools": [
+      "HTML5",
+      "CSS3/Sass",
+      "JavaScript",
+      "Xd",
+      "Illustrator",
+      "Photoshop"
+    ],
+    "more": {
+      "description": "JavaScriptの基礎学習のまとめとして作成させていただきました。React等、先の学習を見据えて、特定の処理単位でのモジュール分割を意識しました。Sassにも初めて触れました。フォントサイズの変更等、レスポンシブル対応を関数化し、記述量の削減を図りました。",
+      "moreLists": [
+        {
+          "head": "遷移時アニメーション",
+          "text": "非同期処理を用いて、各アニメーション処理を連結しました。アニメーション間の待ち時間指定をメソッド化し、細かい秒数を調子しやすくしました。"
+        },
+        {
+          "head": "スクロールアニメーション",
+          "text": "見出し・ナビゲーションに導入しています。当初はスクロールイベントでビューポートと要素の高さの差分をアニメーション発火の条件としていました。交差オブザーバーAPI (Intersection Observer API) の存在を知り、リファクタリングを行いました。"
+        },
+        {
+          "head": "スクロール禁止処理",
+          "text": "画面遷移アニメーション時・モバイル版メニュー表示時に導入しています。スクロール・キーダウンイベントを検知した場合、preventDefault()を用いてイベントを無効化しています。"
+        },
+        {
+          "head": "問合せフォーム",
+          "text": "グーグルフォームと連結しています。バリデーションチェックはHTML5標準のものを使用しています。HTML5標準のチェックはsubmitイベントが発生した場合はスルーしてしまう問題がありました。バリデーション・submitイベントのタイミングをJS側に移行することで対応しました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "スグ食べ",
+    "img": "../../images/sugutabe-icon.png",
+    "url": "https://kawahagi014.github.io/sugutabe/",
+    "slider": [
+      "/images/sugutabe-slide1.jpg",
+      "/images/sugutabe-slide2.jpg",
+      "/images/sugutabe-slide3.jpg",
+      "/images/sugutabe-slide4.jpg",
+      "/images/sugutabe-slide5.jpg",
+      "/images/sugutabe-slide6.jpg",
+      "/images/sugutabe-slide7.jpg",
+      "/images/sugutabe-slide8.jpg",
+      "/images/sugutabe-slide9.jpg"
+    ],
+    "about": "デザインのスクール在学中に制作しました。",
+    "tools": ["HTML5", "CSS3/Sass", "JQuery", "Illustrator", "Photoshop"]
+  }
+]
