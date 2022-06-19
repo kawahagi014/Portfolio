@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { FC, memo } from 'react';
-import { Box } from '@chakra-ui/react';
-import { css } from '@emotion/react';
+import { FC, memo } from "react";
+import { Box } from "@chakra-ui/react";
+import { css } from "@emotion/react";
 
-import { Home } from '../templates/Home';
-import { Projects } from '../templates/Projects';
-import { About } from '../templates/About';
-import { Contact } from '../templates/Contact';
-import { Navigation } from '../atoms/Navigation';
-import { useScrollObserver } from '../hooks/useScrollObserver';
+import { Home } from "../templates/Home";
+import { Projects } from "../templates/Projects";
+import { About } from "../templates/About";
+import { Contact } from "../templates/Contact";
+import { Navigation } from "../atoms/Navigation";
+import { useScrollObserver } from "../hooks/useScrollObserver";
 
 export const Main: FC = memo(() => {
   const { intersecting, fullpageRef } = useScrollObserver();
@@ -37,7 +37,8 @@ export const Main: FC = memo(() => {
 
 const fullPageScrollCss = css`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   scroll-snap-type: y mandatory;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -45,7 +46,8 @@ const fullPageScrollCss = css`
 
 const sectionCss = css`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   padding: 10%;
   scroll-margin-top: 7rem;
   scroll-snap-align: start;
