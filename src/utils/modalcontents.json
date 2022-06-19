@@ -42,7 +42,7 @@
   {
     "id": 2,
     "title": "JPHack official site",
-    "img": "../../images/jp-logo.png",
+    "img": "/images/jp-logo.png",
     "url": "https://kawahagi014.github.io/JPHack-oficial-site/",
     "slider": [
       "/images/jp-slide1.jpg",
@@ -89,7 +89,7 @@
   {
     "id": 3,
     "title": "スグ食べ",
-    "img": "../../images/sugutabe-icon.png",
+    "img": "/images/sugutabe-icon.png",
     "url": "https://kawahagi014.github.io/sugutabe/",
     "slider": [
       "/images/sugutabe-slide1.jpg",
