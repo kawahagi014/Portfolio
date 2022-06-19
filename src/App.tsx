@@ -9,6 +9,7 @@ export default function App() {
   return (
     <ChakraProvider theme={theme}>
       <RecoilRoot>
+        {/* basename…本番環境用 */}
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Router />
         </BrowserRouter>

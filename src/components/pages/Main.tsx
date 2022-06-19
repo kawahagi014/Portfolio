@@ -14,6 +14,15 @@ import { useScrollObserver } from "../hooks/useScrollObserver";
 export const Main: FC = memo(() => {
   const { intersecting, fullpageRef } = useScrollObserver();
 
+  const setFillHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  };
+
+  window.addEventListener("resize", setFillHeight);
+
+  setFillHeight();
+
   return (
     <>
       <Box css={fullPageScrollCss} ref={fullpageRef}>
@@ -37,18 +46,20 @@ export const Main: FC = memo(() => {
 
 const fullPageScrollCss = css`
   width: 100%;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   scroll-snap-type: y mandatory;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 `;
 
 const sectionCss = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: calc(var(--vh, 1vh) * 100);
   padding: 10%;
-  scroll-margin-top: 7rem;
   scroll-snap-align: start;
 `;

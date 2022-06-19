@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { FC, memo } from 'react';
-import { css } from '@emotion/react';
-import { HashLink } from 'react-router-hash-link';
-import { List, ListItem } from '@chakra-ui/react';
+import { FC, memo } from "react";
+import { css } from "@emotion/react";
+import { HashLink } from "react-router-hash-link";
+import { List, ListItem } from "@chakra-ui/react";
 
 type Props = {
   isIntersecting: string;
@@ -13,12 +13,16 @@ export const Navigation: FC<Props> = memo((props) => {
 
   return (
     <nav css={navigation}>
-      <List spacing={1} fontSize={{ base: 'md', md: 'xl' }}>
+      <List
+        spacing={1}
+        fontSize={{ base: "md", md: "xl" }}
+        display={{ base: "none", md: "inline-block" }}
+      >
         <ListItem>
           <HashLink
             smooth
             to="#section01"
-            css={isIntersecting === 'section01' ? active : nonactive}
+            css={isIntersecting === "section01" ? active : nonactive}
           >
             01 Home
           </HashLink>
@@ -27,7 +31,7 @@ export const Navigation: FC<Props> = memo((props) => {
           <HashLink
             smooth
             to="#section02"
-            css={isIntersecting === 'section02' ? active : nonactive}
+            css={isIntersecting === "section02" ? active : nonactive}
           >
             02 Project
           </HashLink>
@@ -36,7 +40,7 @@ export const Navigation: FC<Props> = memo((props) => {
           <HashLink
             smooth
             to="#section03"
-            css={isIntersecting === 'section03' ? active : nonactive}
+            css={isIntersecting === "section03" ? active : nonactive}
           >
             03 About
           </HashLink>
@@ -45,7 +49,7 @@ export const Navigation: FC<Props> = memo((props) => {
           <HashLink
             smooth
             to="#section04"
-            css={isIntersecting === 'section04' ? active : nonactive}
+            css={isIntersecting === "section04" ? active : nonactive}
           >
             04 Contact
           </HashLink>
