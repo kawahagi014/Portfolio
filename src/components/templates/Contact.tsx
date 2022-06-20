@@ -9,7 +9,6 @@ import {
   Textarea,
   FormErrorMessage,
   useDisclosure,
-  Center,
 } from "@chakra-ui/react";
 import { FC, memo, useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";

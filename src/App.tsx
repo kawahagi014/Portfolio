@@ -11,6 +11,7 @@ export default function App() {
       <RecoilRoot>
         {/* basename…本番環境用 */}
         <BrowserRouter basename={process.env.PUBLIC_URL}>
+          {/* <BrowserRouter> */}
           <Router />
         </BrowserRouter>
       </RecoilRoot>

@@ -1,9 +1,9 @@
-import { useCallback, useState } from 'react';
-import { useRecoilValue } from 'recoil';
-import { init, send } from 'emailjs-com';
+import { useCallback, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { init, send } from "emailjs-com";
 
-import { nameAtom, emailAtom, subjectAtom, messageAtom } from '../states/form';
-import { useMessage } from './useToast';
+import { nameAtom, emailAtom, subjectAtom, messageAtom } from "../states/form";
+import { useMessage } from "./useToast";
 
 export const useSendMail = () => {
   const { showMessage } = useMessage();
@@ -34,17 +34,22 @@ export const useSendMail = () => {
 
       send(serviceID, templateID, templateParam)
         .then(() => {
-          showMessage({ title: 'お問合せを送信しました', status: 'success' });
+          showMessage({ title: "お問合せを送信しました", status: "success" });
           setSendSuccess(true);
         })
         .catch(() => {
           showMessage({
-            title: 'お問合せの送信に失敗しました',
-            status: 'error',
+            title: "お問合せの送信に失敗しました",
+            status: "error",
           });
           setSendSuccess(false);
         })
         .finally(() => sendSuccess);
+    } else {
+      showMessage({
+        title: "お問合せの送信に失敗しました環境変数",
+        status: "error",
+      });
     }
   }, [nameState, emailState, subjectState, messageState]);
 
