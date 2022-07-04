@@ -47,7 +47,7 @@ export const useSendMail = () => {
         .finally(() => sendSuccess);
     } else {
       showMessage({
-        title: "お問合せの送信に失敗しました環境変数",
+        title: "お問合せの送信に失敗しました",
         status: "error",
       });
     }
